@@ -28,14 +28,15 @@ Menu:
 5. Review current diff: `/review-diff`
 6. Build a full-stack endpoint feature: `/fullstack-feature`
 7. Build a feature with no architecture drift: `/build-feature-no-drift`
-8. Security/privacy check: `/security-check`
-9. Release/deploy readiness: `/release-check`
-10. Archive today's work: `/archive-session`
-11. Record a decision: `/adr`
-12. Product/founder direction: `/founder-memo` or `/product-decisions`
-13. UX/copy/SEO review: `/ux-review`, `/copy-review`, `/seo-review`
-14. Frontend/backend/QA/deploy work: `/frontend-task`, `/backend-task`, `/qa-launch`, `/railway-check`
-15. Design AI workflow/schema/extraction/classifier: `/design-agent-workflow`, `/design-structured-output`, `/design-extraction`, `/design-classifier`
+8. Find idle endpoints/components/routes: `/find-idle-surfaces`
+9. Security/privacy check: `/security-check`
+10. Release/deploy readiness: `/release-check`
+11. Archive today's work: `/archive-session`
+12. Record a decision: `/adr`
+13. Product/founder direction: `/founder-memo` or `/product-decisions`
+14. UX/copy/SEO review: `/ux-review`, `/copy-review`, `/seo-review`
+15. Frontend/backend/QA/deploy work: `/frontend-task`, `/backend-task`, `/qa-launch`, `/railway-check`
+16. Design AI workflow/schema/extraction/classifier: `/design-agent-workflow`, `/design-structured-output`, `/design-extraction`, `/design-classifier`
 
 Final answer format:
 - `Recommended Command`

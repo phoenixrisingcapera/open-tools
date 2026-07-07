@@ -25,6 +25,8 @@ Use `/fullstack-feature` when the feature touches both backend and frontend.
 
 Use `/build-feature-no-drift` when the main risk is duplicate architecture, unclear canonical files, or old implementations that might need pruning.
 
+Use `/find-idle-surfaces` before cleanup or refactors to discover likely unused endpoints, components, clients, mocks, tests, and duplicate surfaces.
+
 The workflow is:
 
 1. Inspect current architecture before editing.
@@ -56,6 +58,18 @@ UI event/page load
 ```
 
 This catches the common failure where the backend feature exists but the frontend still calls an old endpoint, mock, fallback, or differently shaped contract.
+
+## Idle Surface Detection
+
+Use `/find-idle-surfaces` as a read-only cleanup scout.
+
+It should never delete files. It reports candidates with confidence:
+
+- High: no references/imports/routes/tests/docs found and not exported as public API.
+- Medium: likely legacy but dynamic/runtime check needed.
+- Low: insufficient evidence or possible external/public use.
+
+Use it before pruning old components, stale API clients, duplicate routes, or mocks that may hide broken wiring.
 
 ## Public Repo Polish
 

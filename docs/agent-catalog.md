@@ -24,6 +24,12 @@ Builds full-stack features by verifying the current endpoint, implementing backe
 
 Command: `/fullstack-feature`
 
+## idle-surface-detector
+
+Finds idle or orphaned API endpoints, frontend components, routes, clients, mocks, tests, and duplicate surfaces without deleting anything.
+
+Command: `/find-idle-surfaces`
+
 ## session-kanban-keeper
 
 Maintains `.opencode/session-kanban.md` so unfinished work survives token limits.

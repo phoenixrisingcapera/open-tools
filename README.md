@@ -12,6 +12,7 @@ Open Tools is a lightweight workflow pack for developers who use AI coding agent
 - Review diffs for bugs, missing tests, security/privacy risks, and release blockers.
 - Build features without architecture drift by verifying canonical endpoints, data contracts, frontend wiring, and duplicate files first.
 - Build full-stack endpoint features by verifying backend route, service, schema, frontend API client, UI state, and end-to-end wiring.
+- Find idle endpoints, components, routes, clients, mocks, and duplicate surfaces before pruning.
 - Maintain repo maps, daily logs, and decision records for future humans and agents.
 
 ## Quick Install
@@ -45,6 +46,7 @@ More detail: `docs/install.md`.
 /audit-completion
 /fullstack-feature
 /build-feature-no-drift
+/find-idle-surfaces
 /map-repo
 /review-diff
 /release-check
@@ -72,6 +74,7 @@ Examples:
 /toolbox what should I use before pushing?
 /fullstack-feature add report export button wired to the current reports endpoint
 /build-feature-no-drift add invoice export without creating duplicate routes
+/find-idle-surfaces check evidence workspace endpoints and old components
 /save-kanban backend tests blocked by missing pgvector, frontend deployed successfully
 /audit-completion check backend and frontend repos plus Railway deployments
 /review-diff focus on auth/session changes
@@ -96,6 +99,7 @@ Open Tools also includes `opencode/open-tools-manifest.json`, a machine-readable
 - `toolbox-navigator` - visible menu that recommends the right command when you do not remember the agent names.
 - `no-drift-feature-builder` - builds features while verifying canonical architecture, endpoints, contracts, frontend wiring, and duplicate/pruning paths.
 - `fullstack-endpoint-builder` - builds backend/frontend endpoint features and proves the UI is wired to the endpoint changed.
+- `idle-surface-detector` - finds orphaned endpoints, components, API clients, mocks, tests, and duplicate surfaces without deleting anything.
 - `session-kanban-keeper` - persistent `.opencode/session-kanban.md` board for unfinished work.
 - `repo-cartographer` - creates `.opencode/repo-map.md` for fast repo understanding.
 - `pr-reviewer` - reviews diffs/PRs for bugs, regressions, missing tests, and risk.
@@ -125,6 +129,7 @@ Open Tools also includes `opencode/open-tools-manifest.json`, a machine-readable
 - `evidence-auditability` - source traceability, review decisions, audit logs, and non-destructive workflows.
 - `no-architecture-drift` - canonical-path checklist for feature work in existing codebases.
 - `fullstack-endpoint-wiring` - endpoint-to-UI contract checklist for full-stack feature work.
+- `idle-surface-detection` - read-only checklist for finding unused endpoints/components and prune candidates.
 
 ## Templates
 
