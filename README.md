@@ -40,6 +40,19 @@ More detail: `docs/install.md`.
 /security-check
 /archive-session
 /adr
+/founder-memo
+/product-decisions
+/copy-review
+/seo-review
+/ux-review
+/frontend-task
+/backend-task
+/qa-launch
+/railway-check
+/design-agent-workflow
+/design-structured-output
+/design-extraction
+/design-classifier
 ```
 
 Examples:
@@ -61,6 +74,19 @@ Examples:
 - `security-privacy-sentinel` - checks secrets, auth/session risks, PII/logging issues, and privacy regressions.
 - `session-archivist` - writes daily logs under `.opencode/session-log/`.
 - `decision-journalist` - writes lightweight ADRs under `.opencode/decisions/`.
+- `founder-strategist` - creates founder-level decision memos, priorities, non-goals, and success criteria.
+- `product-manager` - converts strategy into scope, product decisions, launch priorities, and acceptance criteria.
+- `conversion-copywriter` - writes conversion-focused copy without inventing proof.
+- `seo-llm-discovery` - reviews SEO, metadata, schema, FAQ, internal links, and LLM-answerability.
+- `ux-conversion-reviewer` - reviews UX hierarchy, trust, accessibility, responsive behavior, and conversion friction.
+- `senior-frontend` - frontend implementation/review with accessibility, responsive behavior, and verification focus.
+- `senior-backend` - backend implementation/review with API, data, migrations, auth, jobs, and reliability focus.
+- `qa-launch-verifier` - repeatable QA launch checks for routes, forms, builds, and smoke tests.
+- `railway-maintenance` - Railway deployment/configuration audit without exposing secrets.
+- `bounded-agent-architect` - designs reviewable AI workflows with strict contracts, validation, persistence, and audit trails.
+- `structured-output-designer` - designs strict JSON schemas, prompt rules, validation, persistence, and tests.
+- `document-extraction-agent` - designs exact-text extraction workflows for PDFs, slides, emails, and documents.
+- `domain-classifier` - designs controlled-label classification agents with evidence status, confidence, and reasons.
 
 ## Skills
 
@@ -122,6 +148,22 @@ opencode/
   templates/
 docs/
 ```
+
+## Useful Links
+
+- opencode docs: https://opencode.ai/docs
+- opencode config schema: https://opencode.ai/config.json
+- NVIDIA NeMo Guardrails: https://github.com/NVIDIA/NeMo-Guardrails
+- NVIDIA NeMo Guardrails docs: https://docs.nvidia.com/nemo/guardrails/latest/
+- OpenAI Agents SDK: https://github.com/openai/openai-agents-python
+- LangGraph: https://github.com/langchain-ai/langgraph
+- Microsoft AutoGen: https://github.com/microsoft/autogen
+- CrewAI: https://github.com/crewAIInc/crewAI
+- Repomix codebase packer: https://github.com/yamadashy/repomix
+- Gitingest codebase-to-prompt: https://github.com/cyclotruc/gitingest
+- Sourcegraph Cody: https://sourcegraph.com/cody
+
+See `docs/useful-links.md` for why these are included.
 
 ## License
 
