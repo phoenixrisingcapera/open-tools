@@ -17,6 +17,12 @@ Open Tools is a lightweight workflow pack for developers who use AI coding agent
 From your project root:
 
 ```bash
+/path/to/open-tools/scripts/install-opencode-tools.sh /path/to/your/project
+```
+
+Or install manually:
+
+```bash
 mkdir -p .opencode/agent .opencode/command .opencode/skills
 cp /path/to/open-tools/opencode/agents/*.md .opencode/agent/
 cp /path/to/open-tools/opencode/commands/*.md .opencode/command/
@@ -31,6 +37,7 @@ More detail: `docs/install.md`.
 ## Core Commands
 
 ```text
+/toolbox
 /show-kanban
 /save-kanban
 /audit-completion
@@ -58,15 +65,29 @@ More detail: `docs/install.md`.
 Examples:
 
 ```text
+/toolbox what should I use before pushing?
 /save-kanban backend tests blocked by missing pgvector, frontend deployed successfully
 /audit-completion check backend and frontend repos plus Railway deployments
 /review-diff focus on auth/session changes
 /adr use Railway for frontend deployment instead of Vercel
 ```
 
+## ADHD-Friendly Launcher
+
+Run `/toolbox` when you do not remember which specialist to use. It acts like a small command menu and recommends the right agent/command.
+
+```text
+/toolbox
+/toolbox I need to check if my work is pushed and deployed
+/toolbox 7
+```
+
+Open Tools also includes `opencode/open-tools-manifest.json`, a machine-readable catalog for future UI/plugin/package-manager integrations.
+
 ## Agents
 
 - `github-completion-auditor` - read-only audit for clean working trees, pushed commits, deployments, and local jobs.
+- `toolbox-navigator` - visible menu that recommends the right command when you do not remember the agent names.
 - `session-kanban-keeper` - persistent `.opencode/session-kanban.md` board for unfinished work.
 - `repo-cartographer` - creates `.opencode/repo-map.md` for fast repo understanding.
 - `pr-reviewer` - reviews diffs/PRs for bugs, regressions, missing tests, and risk.

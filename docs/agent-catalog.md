@@ -1,5 +1,11 @@
 # Agent Catalog
 
+## toolbox-navigator
+
+Shows an ADHD-friendly menu and recommends the right Open Tools command.
+
+Command: `/toolbox`
+
 ## github-completion-auditor
 
 Read-only audit for working tree cleanliness, pushed state, deployment status, and local running jobs.

@@ -2,7 +2,19 @@
 
 ## Project Install
 
-From a project root:
+Recommended installer:
+
+```bash
+/path/to/open-tools/scripts/install-opencode-tools.sh /path/to/your/project
+```
+
+Then restart opencode and run:
+
+```text
+/toolbox
+```
+
+Manual install from a project root:
 
 ```bash
 mkdir -p .opencode/agent .opencode/command .opencode/skills
@@ -44,6 +56,7 @@ Use project install when you want `.opencode/session-kanban.md`, `.opencode/repo
 After restart, try:
 
 ```text
+/toolbox
 /show-kanban
 /audit-completion
 ```

@@ -1,0 +1,36 @@
+{
+  "name": "open-tools",
+  "description": "Reusable opencode agents, commands, skills, and templates for AI-assisted software work.",
+  "version": "0.3.0",
+  "entry_command": "/toolbox",
+  "packs": {
+    "memory": ["show-kanban", "save-kanban", "archive-session", "adr", "map-repo"],
+    "preflight": ["audit-completion", "review-diff", "security-check", "release-check"],
+    "software-company": ["founder-memo", "product-decisions", "copy-review", "seo-review", "ux-review", "frontend-task", "backend-task", "qa-launch", "railway-check"],
+    "ai-product-design": ["design-agent-workflow", "design-structured-output", "design-extraction", "design-classifier"]
+  },
+  "agents": [
+    "toolbox-navigator",
+    "github-completion-auditor",
+    "session-kanban-keeper",
+    "repo-cartographer",
+    "pr-reviewer",
+    "release-captain",
+    "security-privacy-sentinel",
+    "session-archivist",
+    "decision-journalist",
+    "founder-strategist",
+    "product-manager",
+    "conversion-copywriter",
+    "seo-llm-discovery",
+    "ux-conversion-reviewer",
+    "senior-frontend",
+    "senior-backend",
+    "qa-launch-verifier",
+    "railway-maintenance",
+    "bounded-agent-architect",
+    "structured-output-designer",
+    "document-extraction-agent",
+    "domain-classifier"
+  ]
+}
