@@ -26,14 +26,16 @@ Menu:
 3. Check clean/pushed/deployed state: `/audit-completion`
 4. Map the codebase: `/map-repo`
 5. Review current diff: `/review-diff`
-6. Security/privacy check: `/security-check`
-7. Release/deploy readiness: `/release-check`
-8. Archive today's work: `/archive-session`
-9. Record a decision: `/adr`
-10. Product/founder direction: `/founder-memo` or `/product-decisions`
-11. UX/copy/SEO review: `/ux-review`, `/copy-review`, `/seo-review`
-12. Frontend/backend/QA/deploy work: `/frontend-task`, `/backend-task`, `/qa-launch`, `/railway-check`
-13. Design AI workflow/schema/extraction/classifier: `/design-agent-workflow`, `/design-structured-output`, `/design-extraction`, `/design-classifier`
+6. Build a full-stack endpoint feature: `/fullstack-feature`
+7. Build a feature with no architecture drift: `/build-feature-no-drift`
+8. Security/privacy check: `/security-check`
+9. Release/deploy readiness: `/release-check`
+10. Archive today's work: `/archive-session`
+11. Record a decision: `/adr`
+12. Product/founder direction: `/founder-memo` or `/product-decisions`
+13. UX/copy/SEO review: `/ux-review`, `/copy-review`, `/seo-review`
+14. Frontend/backend/QA/deploy work: `/frontend-task`, `/backend-task`, `/qa-launch`, `/railway-check`
+15. Design AI workflow/schema/extraction/classifier: `/design-agent-workflow`, `/design-structured-output`, `/design-extraction`, `/design-classifier`
 
 Final answer format:
 - `Recommended Command`

@@ -19,6 +19,44 @@ Use these before commits, PRs, or deploys:
 - `/security-check` - did secrets, PII, or auth/session risk slip in?
 - `/release-check` - is this safe to release?
 
+## No-Drift Feature Delivery
+
+Use `/fullstack-feature` when the feature touches both backend and frontend.
+
+Use `/build-feature-no-drift` when the main risk is duplicate architecture, unclear canonical files, or old implementations that might need pruning.
+
+The workflow is:
+
+1. Inspect current architecture before editing.
+2. Verify existing endpoints, routes, services, pages, and components.
+3. Identify canonical files and duplicate/same-purpose files.
+4. Implement in the canonical path only.
+5. Verify request/response data contracts.
+6. Verify frontend API/client/page wiring.
+7. Explain whether duplicate files were absorbed, are legacy, or need a separate prune.
+8. Run targeted checks/tests.
+
+This is useful for long-lived repos where repeated AI sessions can accidentally create parallel implementations.
+
+## Full-Stack Endpoint Wiring
+
+Use `/fullstack-feature` for endpoint-backed UI work.
+
+The agent must prove this trace:
+
+```text
+UI event/page load
+  -> frontend handler/component
+  -> API client/proxy/fetch wrapper
+  -> backend route path + method
+  -> backend service/model
+  -> response payload
+  -> frontend normalizer/state
+  -> rendered UI
+```
+
+This catches the common failure where the backend feature exists but the frontend still calls an old endpoint, mock, fallback, or differently shaped contract.
+
 ## Public Repo Polish
 
 Use the `public-repo-polish` skill when preparing a public project. Strong public repos explain:

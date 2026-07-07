@@ -6,6 +6,7 @@
   "packs": {
     "memory": ["show-kanban", "save-kanban", "archive-session", "adr", "map-repo"],
     "preflight": ["audit-completion", "review-diff", "security-check", "release-check"],
+    "feature-delivery": ["fullstack-feature", "build-feature-no-drift", "map-repo", "review-diff", "security-check"],
     "software-company": ["founder-memo", "product-decisions", "copy-review", "seo-review", "ux-review", "frontend-task", "backend-task", "qa-launch", "railway-check"],
     "ai-product-design": ["design-agent-workflow", "design-structured-output", "design-extraction", "design-classifier"]
   },
@@ -31,6 +32,8 @@
     "bounded-agent-architect",
     "structured-output-designer",
     "document-extraction-agent",
-    "domain-classifier"
+    "domain-classifier",
+    "no-drift-feature-builder",
+    "fullstack-endpoint-builder"
   ]
 }

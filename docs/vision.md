@@ -43,6 +43,8 @@ Until that exists, `/toolbox` is the lightweight substitute: it gives users a vi
 - Provide copy/paste commands.
 - Persist context in files so memory does not depend on tokens.
 - Prefer status dashboards and checklists over long prose.
+- Make architecture drift visible before coding: endpoints, contracts, frontend wiring, duplicate files, and pruning paths.
+- Treat full-stack endpoint work as one chain: backend route, service, schema, frontend client, UI state, and rendered result.
 
 ## Next Product Steps
 

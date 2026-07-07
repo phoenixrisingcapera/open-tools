@@ -12,6 +12,18 @@ Read-only audit for working tree cleanliness, pushed state, deployment status, a
 
 Command: `/audit-completion`
 
+## no-drift-feature-builder
+
+Builds features without architecture drift by checking canonical files, endpoints, contracts, frontend wiring, and duplicate/pruning paths before and after implementation.
+
+Command: `/build-feature-no-drift`
+
+## fullstack-endpoint-builder
+
+Builds full-stack features by verifying the current endpoint, implementing backend and frontend changes, validating data contracts, and proving frontend wiring.
+
+Command: `/fullstack-feature`
+
 ## session-kanban-keeper
 
 Maintains `.opencode/session-kanban.md` so unfinished work survives token limits.

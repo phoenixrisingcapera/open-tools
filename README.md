@@ -10,6 +10,8 @@ Open Tools is a lightweight workflow pack for developers who use AI coding agent
 - Start a day with saved context instead of reconstructing yesterday from memory.
 - Audit whether work is clean, pushed, deployed, and free of obvious running jobs.
 - Review diffs for bugs, missing tests, security/privacy risks, and release blockers.
+- Build features without architecture drift by verifying canonical endpoints, data contracts, frontend wiring, and duplicate files first.
+- Build full-stack endpoint features by verifying backend route, service, schema, frontend API client, UI state, and end-to-end wiring.
 - Maintain repo maps, daily logs, and decision records for future humans and agents.
 
 ## Quick Install
@@ -41,6 +43,8 @@ More detail: `docs/install.md`.
 /show-kanban
 /save-kanban
 /audit-completion
+/fullstack-feature
+/build-feature-no-drift
 /map-repo
 /review-diff
 /release-check
@@ -66,6 +70,8 @@ Examples:
 
 ```text
 /toolbox what should I use before pushing?
+/fullstack-feature add report export button wired to the current reports endpoint
+/build-feature-no-drift add invoice export without creating duplicate routes
 /save-kanban backend tests blocked by missing pgvector, frontend deployed successfully
 /audit-completion check backend and frontend repos plus Railway deployments
 /review-diff focus on auth/session changes
@@ -88,6 +94,8 @@ Open Tools also includes `opencode/open-tools-manifest.json`, a machine-readable
 
 - `github-completion-auditor` - read-only audit for clean working trees, pushed commits, deployments, and local jobs.
 - `toolbox-navigator` - visible menu that recommends the right command when you do not remember the agent names.
+- `no-drift-feature-builder` - builds features while verifying canonical architecture, endpoints, contracts, frontend wiring, and duplicate/pruning paths.
+- `fullstack-endpoint-builder` - builds backend/frontend endpoint features and proves the UI is wired to the endpoint changed.
 - `session-kanban-keeper` - persistent `.opencode/session-kanban.md` board for unfinished work.
 - `repo-cartographer` - creates `.opencode/repo-map.md` for fast repo understanding.
 - `pr-reviewer` - reviews diffs/PRs for bugs, regressions, missing tests, and risk.
@@ -115,6 +123,8 @@ Open Tools also includes `opencode/open-tools-manifest.json`, a machine-readable
 - `opencode-agent-authoring` - guidance for writing valid opencode agents, commands, and skills.
 - `public-repo-polish` - README/install/license/safety guidance for open-source repos.
 - `evidence-auditability` - source traceability, review decisions, audit logs, and non-destructive workflows.
+- `no-architecture-drift` - canonical-path checklist for feature work in existing codebases.
+- `fullstack-endpoint-wiring` - endpoint-to-UI contract checklist for full-stack feature work.
 
 ## Templates
 
@@ -137,6 +147,13 @@ Before a commit or PR:
 ```text
 /review-diff
 /security-check
+```
+
+When building a feature in an existing codebase:
+
+```text
+/fullstack-feature
+/build-feature-no-drift
 ```
 
 Before a deploy:
