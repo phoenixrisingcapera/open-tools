@@ -8,8 +8,7 @@
     "preflight": ["audit-completion", "review-diff", "security-check", "release-check"],
     "feature-delivery": ["fullstack-feature", "build-feature-no-drift", "find-idle-surfaces", "map-repo", "review-diff", "security-check"],
     "software-company": ["founder-memo", "product-decisions", "copy-review", "seo-review", "ux-review", "frontend-task", "backend-task", "qa-launch", "railway-check"],
-    "ai-product-design": ["design-agent-workflow", "design-structured-output", "design-extraction", "design-classifier"],
-    "product-context": ["product-brain", "map-repo", "adr"]
+    "ai-product-design": ["design-agent-workflow", "design-structured-output", "design-extraction", "design-classifier"]
   },
   "agents": [
     "toolbox-navigator",
