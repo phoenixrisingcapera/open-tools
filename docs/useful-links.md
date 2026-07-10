@@ -2,6 +2,8 @@
 
 Curated resources for people building with opencode and agentic developer workflows.
 
+This is an appendix, not the canonical product overview.
+
 ## opencode
 
 - opencode docs: https://opencode.ai/docs

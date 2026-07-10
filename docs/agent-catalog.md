@@ -1,5 +1,9 @@
 # Agent Catalog
 
+Canonical command names come from `opencode/open-tools-manifest.json`.
+
+This page is the readable reference for the current pack; it is not the source of truth for generated metadata.
+
 ## toolbox-navigator
 
 Shows an ADHD-friendly menu and recommends the right Open Tools command.
@@ -8,7 +12,7 @@ Command: `/toolbox`
 
 ## github-completion-auditor
 
-Read-only audit for working tree cleanliness, pushed state, deployment status, and local running jobs.
+Operational completion audit for working tree cleanliness, pushed state, deployment status, and local running jobs.
 
 Command: `/audit-completion`
 
@@ -20,7 +24,7 @@ Command: `/build-feature-no-drift`
 
 ## fullstack-endpoint-builder
 
-Builds full-stack features by verifying the current endpoint, implementing backend and frontend changes, validating data contracts, and proving frontend wiring.
+Builds full-stack endpoint features by verifying the current endpoint, implementing backend and frontend changes, validating data contracts, and proving frontend wiring.
 
 Command: `/fullstack-feature`
 
@@ -149,3 +153,15 @@ Command: `/design-extraction`
 Designs controlled-label classification agents with evidence status, confidence, reasons, and strict JSON output.
 
 Command: `/design-classifier`
+
+## docs-and-push
+
+Generates or updates project documentation, commits, and pushes to main. If interrupted, writes remaining tasks to the session kanban for resumption.
+
+Command: `/docs-and-push`
+
+## product-brain
+
+Loads the canonical MailTrace product brain — domain terms, architecture, key files, variables, naming, infra — so outputs are context-aware and consistent.
+
+Command: `/product-brain`

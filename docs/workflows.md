@@ -10,18 +10,23 @@ Use these together to avoid losing context across token limits:
 - `/map-repo` - create durable repo context.
 - `/adr` - save decisions that should not be rediscovered later.
 
+## Completion Audit
+
+Use `/audit-completion` before commits, PRs, or deploys.
+
+It checks operational readiness: working tree, branch state, pushed commits, GitHub or PR status, deploy state, and local jobs.
+
 ## Preflight Suite
 
-Use these before commits, PRs, or deploys:
+Use these with `/audit-completion` when you need a deeper release check:
 
-- `/audit-completion` - is local/GitHub/deployment state clean?
 - `/review-diff` - are there bugs or missing tests?
 - `/security-check` - did secrets, PII, or auth/session risk slip in?
 - `/release-check` - is this safe to release?
 
-## No-Drift Feature Delivery
+## Feature Delivery
 
-Use `/fullstack-feature` when the feature touches both backend and frontend.
+Use `/fullstack-feature` when the feature touches backend and frontend and you need endpoint wiring proven end to end.
 
 Use `/build-feature-no-drift` when the main risk is duplicate architecture, unclear canonical files, or old implementations that might need pruning.
 
@@ -39,6 +44,12 @@ The workflow is:
 8. Run targeted checks/tests.
 
 This is useful for long-lived repos where repeated AI sessions can accidentally create parallel implementations.
+
+## Code Vs Docs Audit
+
+Use `docs/audit-playbook.md` when you need to compare documentation to actual code or pack behavior.
+
+That audit should answer one question for each claim: is it matched, stale, missing, or intentionally evolved?
 
 ## Full-Stack Endpoint Wiring
 
@@ -94,6 +105,10 @@ Use the `evidence-auditability` skill for workflows where source traceability ma
 - audit logs and review decisions
 
 Core idea: every generated claim should trace back to source evidence.
+
+## Deployment
+
+The current pack is Railway-specific for deployment checks. Use `/railway-check` for deployment readiness instead of assuming a generic deploy flow.
 
 ## Software Company Role Pack
 

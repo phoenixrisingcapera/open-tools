@@ -26,6 +26,8 @@ cp /path/to/open-tools/opencode/templates/session-kanban.md .opencode/session-ka
 
 Restart opencode after copying. opencode does not hot-reload agents, commands, or skills.
 
+Commands that create durable project artifacts will write them on demand. You do not need to pre-create them, but if you want them immediately you can run `/map-repo`, `/archive-session`, and `/adr` after install.
+
 ## Minimal Install
 
 If you only want durable todos:
@@ -60,3 +62,5 @@ After restart, try:
 /show-kanban
 /audit-completion
 ```
+
+If `/toolbox` does not appear, confirm the files were copied into the active project root and restart opencode again.

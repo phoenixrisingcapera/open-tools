@@ -7,7 +7,7 @@ Open Tools should feel like a small operating system for AI-assisted work, not a
 1. Install Open Tools into a project.
 2. Restart opencode.
 3. See a visible command such as `/toolbox`.
-4. Choose from a simple menu: memory, preflight, product, frontend, backend, QA, deploy, AI workflow design.
+4. Choose from a simple menu: memory, preflight, product, frontend, backend, QA, Railway deploy, AI workflow design.
 5. Let the selected specialist agent do the work.
 
 ## What Works Today
@@ -24,7 +24,7 @@ This repo provides:
 - `/toolbox` as a navigator command
 - `opencode/open-tools-manifest.json` as a machine-readable catalog
 
-## Dropdown / Button Idea
+## Future UI Idea
 
 A true small dropdown button inside opencode would likely need one of these:
 
@@ -34,6 +34,8 @@ A true small dropdown button inside opencode would likely need one of these:
 - a future `opencode install github:user/repo` style package flow
 
 Until that exists, `/toolbox` is the lightweight substitute: it gives users a visible menu and routes them to the right command.
+
+This is future work, not a current product claim.
 
 ## ADHD-Friendly Design Principles
 
