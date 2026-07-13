@@ -1,0 +1,11 @@
+{
+  "name": "open-tools-website",
+  "version": "1.0.0",
+  "description": "Open Tools website",
+  "scripts": {
+    "start": "serve website"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
