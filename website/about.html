@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Open Tools</title>
+  <meta name="description" content="Open Tools is a workflow pack of specialized AI agents for the full software lifecycle. Built for opencode. MIT licensed.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-orbs">
+  <div class="bg-orb"></div>
+  <div class="bg-orb"></div>
+  <div class="bg-orb"></div>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">open<span>tools</span></a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="features.html">Features</a>
+      <a href="posts.html">Posts</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/phoenixrisingcapera/open-tools" class="nav-cta">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<section class="about-hero">
+  <div class="section-label text-center">About</div>
+  <h1 style="max-width: 700px; margin: 0 auto 1.5rem;">Not a framework. Not a runtime. <span class="gradient-text">A workflow pack.</span></h1>
+  <p style="max-width: 600px; margin: 0 auto; color: var(--text-light); font-size: 1.1rem;">Open Tools is a collection of markdown files that opencode reads. No dependencies. No build step. No lock-in.</p>
+</section>
+
+<section>
+  <div class="section-inner">
+    <div class="about-content">
+      <h2>Why Open Tools Exists</h2>
+      <p>General-purpose AI assistants don't enforce git safety. They don't prevent architecture drift. They don't maintain persistent kanban boards. They don't remember what happened in the last session.</p>
+      <p>Open Tools fixes this. It gives you specialized agents with explicit permissions, bounded domains, and memory across sessions. Each agent does one thing well. Together they cover the entire software lifecycle.</p>
+
+      <h2>What It Is</h2>
+      <p>Open Tools is a workflow pack for <a href="https://opencode.ai">opencode</a> — the AI coding tool. It contains:</p>
+      <ul>
+        <li><strong>27 agents</strong> — Specialized AI personas with rules, permissions, and a purpose</li>
+        <li><strong>30 commands</strong> — Slash commands that invoke agents with specific prompts</li>
+        <li><strong>13 skills</strong> — Reusable instruction sets any agent can load</li>
+        <li><strong>6 packs</strong> — Curated groups of commands for specific workflows</li>
+        <li><strong>4 templates</strong> — Kanban, ADRs, repo maps, and session logs</li>
+      </ul>
+
+      <h2>What It Is Not</h2>
+      <p>Open Tools is not a runtime. It doesn't execute code. It doesn't have a server. It doesn't store data. It's markdown files that opencode reads and follows.</p>
+      <p>You copy the agents into your project. Restart opencode. Run <code>/toolbox</code>. That's it.</p>
+
+      <h2>The Safety Model</h2>
+      <p>Every agent follows strict safety rules:</p>
+      <ul>
+        <li>Review and audit agents are read-only by default</li>
+        <li>Memory agents write only under <code>.opencode/</code></li>
+        <li>No agent stores secrets, tokens, or credentials</li>
+        <li>Destructive git commands are forbidden unless confirmed</li>
+        <li>All agents follow <code>safe-git-workflow</code> — no force-push, no <code>git reset --hard</code></li>
+      </ul>
+
+      <h2>The License</h2>
+      <p>MIT. Free and open source. Fork it, extend it, ship it. No attribution required. No strings attached.</p>
+
+      <h2>The Author</h2>
+      <p>Open Tools is built by Andrea Capera. Every agent, command, and skill is designed with deliberate boundaries. Nothing is accidental.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--bg-alt);">
+  <div class="section-inner">
+    <div class="section-label">Values</div>
+    <div class="section-title">What guides the project.</div>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>Bounded Domains</h3>
+        <p>Every agent owns one domain. No overlap. No bleed. When a task falls outside an agent's boundary, it hands off to the right agent.</p>
+      </div>
+      <div class="card">
+        <h3>Explicit Contracts</h3>
+        <p>Input schemas, output schemas, validation gates. Every agent validates its input before executing. Every agent logs its output.</p>
+      </div>
+      <div class="card">
+        <h3>Zero Dependencies</h3>
+        <p>No runtime. No server. No build step. Markdown files that opencode reads. Copy them in. Start using them. That's the entire installation.</p>
+      </div>
+      <div class="card">
+        <h3>Memory First</h3>
+        <p>Context survives token limits. Kanban boards, session logs, ADRs, and context directories preserve your work state across sessions.</p>
+      </div>
+      <div class="card">
+        <h3>Safety by Default</h3>
+        <p>Read-only agents can't edit files. Memory agents write only to safe directories. Secrets are never stored. Destructive commands require confirmation.</p>
+      </div>
+      <div class="card">
+        <h3>Composable</h3>
+        <p>Agents, commands, skills, and packs compose freely. Load a skill into any agent. Run any pack. Mix and match for your workflow.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="color: white;">open<span>tools</span></a>
+        <p>Specialized AI agents for the full software lifecycle. Memory, preflight, feature delivery, and advanced tooling. MIT licensed.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <a href="features.html">Features</a>
+        <a href="https://github.com/phoenixrisingcapera/open-tools">GitHub</a>
+        <a href="https://opencode.ai">opencode</a>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <a href="posts.html">Posts</a>
+        <a href="https://github.com/phoenixrisingcapera/open-tools/blob/main/docs/install.md">Install Guide</a>
+        <a href="https://github.com/phoenixrisingcapera/open-tools/blob/main/CONTRIBUTING.md">Contributing</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com/phoenixrisingcapera/open-tools/blob/main/LICENSE">License</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Andrea Capera. MIT License.</span>
+      <span>Built for opencode.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.card').forEach(el => {
+  el.classList.add('reveal');
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>

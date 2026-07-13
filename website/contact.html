@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Open Tools</title>
+  <meta name="description" content="Get in touch with the Open Tools team. Report issues, request features, or ask questions about the project.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-orbs">
+  <div class="bg-orb"></div>
+  <div class="bg-orb"></div>
+  <div class="bg-orb"></div>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">open<span>tools</span></a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="features.html">Features</a>
+      <a href="posts.html">Posts</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/phoenixrisingcapera/open-tools" class="nav-cta">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<section class="about-hero">
+  <div class="section-label text-center">Contact</div>
+  <h1 style="max-width: 600px; margin: 0 auto 1.5rem;">Let's <span class="gradient-text">talk.</span></h1>
+  <p style="max-width: 500px; margin: 0 auto; color: var(--text-light); font-size: 1.1rem;">Questions, feedback, contributions, or partnership inquiries. We read every message.</p>
+</section>
+
+<section>
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you. We will respond within 48 hours.');">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="general">General Inquiry</option>
+              <option value="bug">Bug Report</option>
+              <option value="feature">Feature Request</option>
+              <option value="contribution">Contribution</option>
+              <option value="partnership">Partnership</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Tell us what's on your mind."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Send Message</button>
+        </form>
+      </div>
+
+      <div>
+        <div class="card contact-info-card">
+          <h4>GitHub Issues</h4>
+          <p>For bug reports and feature requests, open an issue on GitHub. We triage every issue within 48 hours.</p>
+          <p class="mt-1"><a href="https://github.com/phoenixrisingcapera/open-tools/issues">Open an Issue →</a></p>
+        </div>
+
+        <div class="card contact-info-card">
+          <h4>Contributions</h4>
+          <p>Want to add an agent, command, or skill? Read the contributing guide and submit a pull request.</p>
+          <p class="mt-1"><a href="https://github.com/phoenixrisingcapera/open-tools/blob/main/CONTRIBUTING.md">Read the Guide →</a></p>
+        </div>
+
+        <div class="card contact-info-card">
+          <h4>opencode</h4>
+          <p>Questions about opencode itself? Check the official documentation.</p>
+          <p class="mt-1"><a href="https://opencode.ai/docs">opencode Docs →</a></p>
+        </div>
+
+        <div class="card contact-info-card">
+          <h4>Response Time</h4>
+          <p>We respond to all inquiries within 48 hours. Critical bugs are prioritized.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="color: white;">open<span>tools</span></a>
+        <p>Specialized AI agents for the full software lifecycle. Memory, preflight, feature delivery, and advanced tooling. MIT licensed.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <a href="features.html">Features</a>
+        <a href="https://github.com/phoenixrisingcapera/open-tools">GitHub</a>
+        <a href="https://opencode.ai">opencode</a>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <a href="posts.html">Posts</a>
+        <a href="https://github.com/phoenixrisingcapera/open-tools/blob/main/docs/install.md">Install Guide</a>
+        <a href="https://github.com/phoenixrisingcapera/open-tools/blob/main/CONTRIBUTING.md">Contributing</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com/phoenixrisingcapera/open-tools/blob/main/LICENSE">License</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Andrea Capera. MIT License.</span>
+      <span>Built for opencode.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.card').forEach(el => {
+  el.classList.add('reveal');
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features — Open Tools</title>
+  <meta name="description" content="27 specialized agents, 13 workflow skills, 30 slash commands, and 6 curated packs. Every tool covers a specific phase of the software lifecycle.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-orbs">
+  <div class="bg-orb"></div>
+  <div class="bg-orb"></div>
+  <div class="bg-orb"></div>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">open<span>tools</span></a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="features.html">Features</a>
+      <a href="posts.html">Posts</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/phoenixrisingcapera/open-tools" class="nav-cta">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="section-label text-center">Features</div>
+  <h1 style="max-width: 700px; margin: 0 auto 1.5rem;">Every tool does <span class="gradient-text">one thing well.</span></h1>
+  <p style="max-width: 600px; margin: 0 auto;">27 agents, 13 skills, 30 commands. Each one owns a specific domain. Together they cover the full software lifecycle.</p>
+</section>
+
+<section>
+  <div class="section-inner">
+    <div class="section-label">Agents</div>
+    <div class="section-title">Specialized personas. Explicit boundaries.</div>
+    <div class="section-desc">Each agent has a defined purpose, permissions, and rules. No overlap. No ambiguity.</div>
+
+    <div class="feature-row">
+      <div class="feature-content">
+        <h3>Session Memory</h3>
+        <p>Never lose context across token limits. The <code>session-kanban-keeper</code> maintains a persistent todo board. The <code>session-archivist</code> writes daily summaries. The <code>decision-journalist</code> captures architecture decisions as lightweight ADRs.</p>
+        <p>Run <code>/show-kanban</code> at the start of every session. Run <code>/save-kanban</code> at the end. Your work state survives.</p>
+      </div>
+      <div class="feature-visual">
+<code><span class="terminal-line"><span class="cmd">/show-kanban</span></span>
+<span class="terminal-line"><span class="arrow">→</span> Active: 3 tasks</span>
+<span class="terminal-line"><span class="arrow">→</span> In Review: 1 task</span>
+<span class="terminal-line"><span class="arrow">→</span> Blocked: 0 tasks</span>
+<span class="terminal-line"></span>
+<span class="terminal-line"><span class="cmd">/save-kanban</span></span>
+<span class="terminal-line"><span class="arrow">→</span> <span class="success">Saved 4 tasks to .opencode/session-kanban.md</span></span></code>
+      </div>
+    </div>
+
+    <div class="feature-row reverse">
+      <div class="feature-content">
+        <h3>Preflight Checks</h3>
+        <p>Before you push, run the preflight pack. <code>/audit-completion</code> checks git state. <code>/review-diff</code> finds bugs and regressions. <code>/security-check</code> catches secret leaks. <code>/release-check</code> validates deployment readiness.</p>
+        <p>Every check is read-only. Nothing changes unless you ask it to.</p>
+      </div>
+      <div class="feature-visual">
+<code><span class="terminal-line"><span class="cmd">$ /security-check</span></span>
+<span class="terminal-line"><span class="arrow">→</span> Scanning diff for secrets...</span>
+<span class="terminal-line"><span class="arrow">→</span> Scanning for PII exposure...</span>
+<span class="terminal-line"><span class="arrow">→</span> Checking auth/session changes...</span>
+<span class="terminal-line"><span class="arrow">→</span> <span class="success">Result: 0 findings</span></span>
+<span class="terminal-line"></span>
+<span class="terminal-line"><span class="cmd">$ /release-check</span></span>
+<span class="terminal-line"><span class="arrow">→</span> <span class="success">Ready to deploy</span></span></code>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-content">
+        <h3>Feature Delivery</h3>
+        <p>Build features without architecture drift. <code>/fullstack-feature</code> validates backend, frontend, contracts, and wiring. <code>/build-feature-no-drift</code> prevents duplicate routes and endpoints. <code>/find-idle-surfaces</code> discovers orphaned code.</p>
+        <p>Every feature is validated against the existing codebase before it's written.</p>
+      </div>
+      <div class="feature-visual">
+<code><span class="terminal-line"><span class="cmd">$ /fullstack-feature</span></span>
+<span class="terminal-line"><span class="arrow">→</span> Verifying route: /api/users</span>
+<span class="terminal-line"><span class="arrow">→</span> Checking schema: user.model.ts</span>
+<span class="terminal-line"><span class="arrow">→</span> Validating API client: useUsers.ts</span>
+<span class="terminal-line"><span class="arrow">→</span> Checking UI state: UsersList.tsx</span>
+<span class="terminal-line"><span class="arrow">→</span> <span class="success">Result: All contracts aligned</span></span></code>
+      </div>
+    </div>
+
+    <div class="feature-row reverse">
+      <div class="feature-content">
+        <h3>Role-Based Agents</h3>
+        <p>Dedicated agents for every role. <code>/frontend-task</code> handles UI correctness and accessibility. <code>/backend-task</code> covers API contracts and data safety. <code>/qa-launch</code> runs routes, forms, and smoke tests. <code>/railway-check</code> audits deployment health.</p>
+        <p>Each agent works within its domain. No bleed. No overlap.</p>
+      </div>
+      <div class="feature-visual">
+<code><span class="terminal-line"><span class="cmd">$ /frontend-task</span></span>
+<span class="terminal-line"><span class="arrow">→</span> Checking responsive breakpoints</span>
+<span class="terminal-line"><span class="arrow">→</span> Validating ARIA attributes</span>
+<span class="terminal-line"><span class="arrow">→</span> Testing keyboard navigation</span>
+<span class="terminal-line"><span class="arrow">→</span> <span class="success">Result: 2 issues found</span></span>
+<span class="terminal-line"></span>
+<span class="terminal-line"><span class="cmd">$ /backend-task</span></span>
+<span class="terminal-line"><span class="arrow">→</span> <span class="success">All checks passed</span></span></code>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--bg-alt);">
+  <div class="section-inner">
+    <div class="section-label">Advanced Skills</div>
+    <div class="section-title">Built for complex workflows.</div>
+    <div class="section-desc">Extracted from production systems. Validated across real projects. Ready to use.</div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">⚙</div>
+        <h3>Skill Build System</h3>
+        <p>Compile agent skills from composable templates. Language-specific code examples. Machine-readable registries. Scaffolding for new skills.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⬡</div>
+        <h3>Multi-Skill Routing</h3>
+        <p>Orchestrate multiple skills with explicit boundaries. Routing rules, handoff protocols, and lifecycle coverage. No skill bleed.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">◇</div>
+        <h3>Data Presentation</h3>
+        <p>Format structured data as readable Markdown. Label mapping, date formatting, currency display, record linking, and table alignment.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⊞</div>
+        <h3>Context-V Memory</h3>
+        <p>Structured directory layout for persistent agent memory. Specs, plans, prompts, reminders, issues, and explorations — organized and findable.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⊟</div>
+        <h3>Citation Manager</h3>
+        <p>Generate hex citation IDs. Convert numeric citations to unique hex format. Cross-document citation tracking with 6-character identifiers.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⊡</div>
+        <h3>Plugin Validator</h3>
+        <p>Validate agent, command, and skill definitions. Check frontmatter, required fields, file structure, and cross-references before deployment.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⊕</div>
+        <h3>MCP Setup</h3>
+        <p>Configure MCP servers with automatic URL normalization. Add, list, remove, and test server connectivity from a single command.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⊘</div>
+        <h3>Bounded Workflows</h3>
+        <p>Design multi-step AI pipelines with input/output contracts, validation gates, human approval points, and complete audit trails.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⊙</div>
+        <h3>Architecture Mapping</h3>
+        <p>Map repositories into durable architecture guides. Entry points, data flow, dependencies, and risk areas — documented automatically.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="section-inner text-center">
+    <div class="section-title" style="color: var(--text-bright);">See the full agent catalog.</div>
+    <p style="color: var(--text-light); max-width: 500px; margin: 0 auto 2rem;">27 agents. Every one documented. Every one bounded. Every one ready to use.</p>
+    <a href="https://github.com/phoenixrisingcapera/open-tools/blob/main/docs/agent-catalog.md" class="btn btn-primary">View Catalog</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="color: white;">open<span>tools</span></a>
+        <p>Specialized AI agents for the full software lifecycle. Memory, preflight, feature delivery, and advanced tooling. MIT licensed.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <a href="features.html">Features</a>
+        <a href="https://github.com/phoenixrisingcapera/open-tools">GitHub</a>
+        <a href="https://opencode.ai">opencode</a>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <a href="posts.html">Posts</a>
+        <a href="https://github.com/phoenixrisingcapera/open-tools/blob/main/docs/install.md">Install Guide</a>
+        <a href="https://github.com/phoenixrisingcapera/open-tools/blob/main/CONTRIBUTING.md">Contributing</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com/phoenixrisingcapera/open-tools/blob/main/LICENSE">License</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Andrea Capera. MIT License.</span>
+      <span>Built for opencode.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.card, .feature-row').forEach(el => {
+  el.classList.add('reveal');
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
