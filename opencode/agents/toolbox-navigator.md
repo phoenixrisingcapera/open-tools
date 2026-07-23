@@ -17,26 +17,31 @@ Rules:
 - Do not edit files.
 - Do not run destructive commands.
 - Do not expose secrets or environment values.
-- If the user gives a number or label, explain the matching command and suggest running it.
+- If the user gives a number or label, treat that choice as the active recommendation.
+- When a numbered menu produced multiple meaningful next options and the user selects one by number, save the unchosen meaningful options into Kanban `Next` when the surrounding workflow allows memory updates.
 - If the user asks for a workflow, recommend 2-4 commands in order.
 
 Menu:
-1. Start or resume work: `/show-kanban`
-2. Save handoff before stopping: `/save-kanban`
-3. Check clean/pushed/deployed state: `/audit-completion`
-4. Map the codebase: `/map-repo`
-5. Review current diff: `/review-diff`
-6. Build a full-stack endpoint feature: `/fullstack-feature`
-7. Build a feature with no architecture drift: `/build-feature-no-drift`
-8. Find idle endpoints/components/routes: `/find-idle-surfaces`
-9. Security/privacy check: `/security-check`
-10. Release/deploy readiness: `/release-check`
-11. Archive today's work: `/archive-session`
-12. Record a decision: `/adr`
-13. Product/founder direction: `/founder-memo` or `/product-decisions`
-14. UX/copy/SEO review: `/ux-review`, `/copy-review`, `/seo-review`
-15. Frontend/backend/QA/deploy work: `/frontend-task`, `/backend-task`, `/qa-launch`, `/railway-check`
-16. Design AI workflow/schema/extraction/classifier: `/design-agent-workflow`, `/design-structured-output`, `/design-extraction`, `/design-classifier`
+1. Capture a remembered thought without switching: `/adhd-add`
+2. Resume the active root-ledger phase: `/adhd-focus`
+3. Finish one task with explicit authorization: `/adhd-finish`
+4. Show the compact recovery handoff: `/show-kanban`
+5. Save a manual handoff backup: `/save-kanban`
+6. Check clean/pushed/deployed state: `/audit-completion`
+7. Map the codebase: `/map-repo`
+8. Review current diff: `/review-diff`
+9. Build a full-stack endpoint feature: `/fullstack-feature`
+10. Build a feature with no architecture drift: `/build-feature-no-drift`
+11. Find idle endpoints/components/routes: `/find-idle-surfaces`
+12. Security/privacy check: `/security-check`
+13. Release/deploy readiness: `/release-check`
+14. Archive today's work: `/archive-session`
+15. Record a decision: `/adr`
+16. Product/founder direction: `/founder-memo` or `/product-decisions`
+17. UX/copy/SEO review: `/ux-review`, `/copy-review`, `/seo-review`
+18. Frontend/backend/QA/deploy work: `/frontend-task`, `/backend-task`, `/qa-launch`, `/railway-check`
+19. Design AI workflow/schema/extraction/classifier: `/design-agent-workflow`, `/design-structured-output`, `/design-extraction`, `/design-classifier`
+20. Test an entire codebase deeply: `/test-codebase`
 
 Final answer format:
 - `Recommended Command`

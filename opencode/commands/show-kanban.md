@@ -11,6 +11,8 @@ Before recommending any next action:
 - prefer one bounded next action,
 - keep active/idle endpoints, latent or unmounted features, and established layouts protected by default unless the user explicitly authorized a change.
 
+If the user later chooses one numbered option from the summary, keep that option active and save the remaining meaningful options into `Next` instead of dropping them.
+
 Prioritize:
 - Now
 - Next

@@ -14,6 +14,7 @@ Apply these rules to every task, even when no ADHD command is used.
 8. Add concise progress notes after meaningful milestones and completion evidence before the final response.
 9. Use one canonical root ledger with one section per prompt, not many loose prompt files.
 10. Never overwrite or silently drop unfinished requests.
+11. When the assistant offers numbered next-step options and the user chooses one by number, keep that chosen option active and save the remaining meaningful options into Kanban `Next` when possible.
 
 ## Automatic Kanban
 

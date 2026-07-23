@@ -66,6 +66,7 @@ When reviewing the board:
 2. Summarize `Now`, `Next`, and `Blocked` first.
 3. Mention the most recent completed items and useful commands only if they help restart work.
 4. Recommend one first action.
+5. If the user answers a numbered option menu by choosing one option, keep that chosen item as the active recommendation and save the remaining meaningful options into `Next` instead of losing them.
 
 When the file does not exist:
 - Create it with the format above.
