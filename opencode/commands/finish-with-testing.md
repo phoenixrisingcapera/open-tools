@@ -14,6 +14,7 @@ Execution requirements:
 - Claim one bounded `IN PROGRESS` session before substantial work and avoid overlapping an existing owner.
 - Preserve active/idle endpoints, latent or unmounted features, and established layouts by default unless the user explicitly authorizes a bounded change.
 - Persist checkpoints in `ADHD_TASKS.md` and `.opencode/session-kanban.md` after meaningful milestones and before the final response.
+- If the prompt is multi-idea, rant-like, or ambiguous, first ask one short clarification question at a time. Prefer order: goal, scope, impact/priority, then permission mode if needed.
 
 Authorization modes:
 
@@ -23,6 +24,8 @@ Authorization modes:
 - `all`: finish locally, publish to GitHub automatically, and complete any requested Railway work.
 
 Use `local` unless the arguments explicitly include `github`, `railway`, or `all`.
+
+If remote work may be needed and the mode is missing, ask once at startup for `local`, `github`, `railway`, or `all`, save that answer, and then continue end to end unless scope materially changes.
 
 Examples:
 

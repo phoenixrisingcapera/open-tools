@@ -12,6 +12,7 @@ Required behavior:
 - Treat this as thinking organization, not immediate implementation, unless the user explicitly asks to switch into build mode.
 - Save each distinct idea, concern, task, or blocker into the persistent Kanban or ADHD ledger before it can be lost.
 - Ask only one important scope/context question at a time.
+- Prefer question order: goal, then scope, then impact/priority, then permission mode only if implementation or remote work may follow.
 - Reorganize convoluted thinking into short concrete bullets: current goal, open questions, saved ideas, blockers, and recommended next action.
 - When the user finishes a thought fragment, convert it into a durable next step, Kanban item, or later-idea capture as appropriate.
 - If implementation is later requested, hand off the clarified task into the normal ADHD finish/focus workflow without dropping the captured context.
