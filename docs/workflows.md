@@ -4,11 +4,51 @@
 
 Use these together to avoid losing context across token limits:
 
+- `/adhd-add <thought>` - park an interruption without changing the active task.
+- `/adhd-focus` - resume the one active task.
+- `/clear-thinking <topic>` - save each idea safely and ask one important question at a time to finish the thought.
+- `/adhd-review-publish` - review completion and publish readiness before a remote finish run.
+- `/adhd-finish local|github|railway|all <task>` - finish with explicit remote authorization.
+- `/finish-with-testing local|github|railway|all <task>` - finish end to end with explicit local shell/testing/build/browser verification.
+- `/explain-me <question>` - stay read-only while understanding code, architecture, or decisions.
 - `/show-kanban` - start from current unfinished work.
 - `/save-kanban` - preserve current todos before stopping.
 - `/archive-session` - save a dated historical summary.
 - `/map-repo` - create durable repo context.
 - `/adr` - save decisions that should not be rediscovered later.
+
+When installed with the privacy-first config, `adhd-finisher` is the default agent and updates the Kanban automatically. `/save-kanban` remains a manual backup rather than something the user must remember. Public conversation sharing is disabled by default in that generated config.
+
+### Root Prompt Ledger
+
+`ADHD_TASKS.md` is the visible source of task progress. For every non-trivial prompt, the agent:
+
+1. Creates a dated prompt section.
+2. Records each request as a separate checkbox.
+3. Adds proposed phases for three or more requests or substantial work.
+4. Marks tasks and phases complete as evidence is produced.
+5. Appends related remembered requests without replacing active work.
+6. Parks unrelated ideas in `Later Ideas` and resumes the active phase.
+7. Records blockers and exact resume actions before stopping.
+
+Within explicitly authorized remote modes, the ADHD workflow also prefers completion over leaving work behind:
+
+- `github` or `all` creates a PR automatically after successful local verification.
+- If Railway verification is in scope, the PR is merged automatically only after Railway success and required GitHub checks pass.
+- Authorized publish runs include PR documentation by default.
+- Authorized merge runs create annotated completion tags by default.
+- Failures, protections, or missing auth are saved as exact blockers instead of silently stopping.
+
+The single ledger prevents a directory full of disconnected task files while still giving every prompt a durable section.
+
+### Secret-Local Rule
+
+Across these workflows, secrets should stay local:
+
+- do not paste passwords, tokens, cookies, private keys, DB URLs, or secret env values into chat
+- do not persist them into `ADHD_TASKS.md`, `.opencode/session-kanban.md`, `.opencode/adhd-inbox.md`, docs, fixtures, or Git
+- capture only redacted action labels when a reminder is needed
+- prefer direct browser entry or local env configuration when a command needs authentication
 
 ## Completion Audit
 
@@ -109,6 +149,23 @@ Core idea: every generated claim should trace back to source evidence.
 ## Deployment
 
 The current pack is Railway-specific for deployment checks. Use `/railway-check` for deployment readiness instead of assuming a generic deploy flow.
+
+## Full Codebase Testing
+
+Use `/test-codebase` when a package-level test or launch smoke test is not
+enough. The command discovers the active stack and runs every applicable safe
+layer: repository integrity, static checks, unit tests, integration and
+database tests, API/provider contracts, runtime and browser journeys, security,
+reliability, performance smoke, builds, and authorized deployment checks.
+
+```text
+/test-codebase full
+/test-codebase exhaustive time-budget=45m browsers=chromium containers=allowed
+/test-codebase full fix report=FULL_CODEBASE_TEST_REPORT.md
+```
+
+Default mode is verification-only. Use explicit `fix` scope only when you want
+the agent to diagnose, edit, add regression tests, and rerun affected suites.
 
 ## Software Company Role Pack
 
